@@ -15,7 +15,8 @@
 	},
 	"plugins": [
 		"@typescript-eslint",
-		"prettier"
+		"prettier",
+        "import-helpers"
 	],
 	"rules": {
 		"no-use-before-define": "off",
@@ -29,15 +30,21 @@
 				"ts": "never"
 			}
 		],
-		"prettier/prettier": "error"
+		"prettier/prettier": [
+            "error",
+            {
+              "singleQuote": true,
+              "parser": "flow"
+            }
+          ]
 	},
 	"settings": {
 		"import/resolver": {
 			"typescript": {}
 		}
-	},
-	"linebreak-style": [
-		"error",
-		"unix"
-	]
+	}
+	// "linebreak-style": [
+	// 	"error",
+	// 	"unix"
+	// ]
 }
